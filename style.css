@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap');
+
+
+:root {
+    --color-Neutral-white: hsl(0, 0%, 100%);
+    --color-Neutral-Grey100: hsl(214, 17%, 92%);
+    --color-Neutral-Grey200: hsl(0, 0%, 81%);
+    --color-Neutral-Grey400: hsl(224, 10%, 45%);
+    --color-Neutral-Grey500: hsl(217, 19%, 35%);
+    --color-Neutral-Darkblue: hsl(219, 29%, 14%);
+    --color-Neutral-Black: hsl(0, 0%, 7%);
+
+    --color-primary-Purple50: hsl(260, 100%, 95%);
+    --color-primary-Purple300: hsl(264, 82%, 80%);
+    --color-primary-Purple500: hsl(263, 55%, 52%);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: var(--color-Neutral-Grey100);
+    padding: 20px;
+    display: flex;
+    font-size: 13px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+    align-items: stretch;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    border-radius: 8px;
+    padding: 25px 20px;
+    gap: 12px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 13px;
+}
+
+.left {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    width: 75%;
+
+}
+
+.topcard {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+}
+
+.bottomcard {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+}
+
+.right {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.Daniel {
+    background-color: var(--color-primary-Purple500);
+    background-image: url('./images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position: top right 35px;
+    background-size: 80px;
+}
+
+.Jonathan {
+    background-color: var(--color-Neutral-Grey500);
+}
+
+.Jeanette {
+    background-color: var(--color-Neutral-white);
+}
+
+.Patrick {
+    background-color: var(--color-Neutral-Darkblue);
+}
+
+.Kira {
+    background-color: var(--color-Neutral-white);
+    flex: 1;
+}
+
+img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+
+.Daniel img {
+    border-style: solid;
+    border-color: var(--color-primary-Purple300);
+    border-width: 2px;
+}
+
+.Patrick img {
+    border-style: solid;
+    border-color: var(--color-primary-Purple500);
+    border-width: 2px;
+}
+
+.name {
+    font-size: 12px;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.desc {
+    font-weight: 500;
+}
+
+
+.grey100 {
+    color: var(--color-Neutral-Grey100);
+}
+
+.grey200 {
+    color: var(--color-Neutral-Grey200);
+}
+
+.grey400 {
+    color: var(--color-Neutral-Grey400);
+}
+
+.Grey500 {
+    color: var(--color-Neutral-Grey500);
+}
+
+.white {
+    color: var(--color-Neutral-white);
+}
+
+
+
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .topcard,
+    .bottomcard {
+        flex-direction: column;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
+
+    .card {
+        max-width: 95%;
+        margin: 0 auto;
+    }
+
+    .Kira {
+        width: 100%;
+    }
+
+    .Daniel {
+        background-image: none;
+    }
+}
